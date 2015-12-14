@@ -1,0 +1,121 @@
+<!--Created 12/13/2014 by Carlos Brenneisen -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>WeatherApp</title>
+
+<!-- jQuery -->
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Underscore -->
+<script src="js/underscore-min.js"></script>
+
+<!-- Backbone -->
+<script src="js/backbone-min.js"></script>
+<script src="js/backbone.localStorage-min.js"></script>
+
+<!-- Custom -->
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/main.js"></script>
+
+<!-- Templates -->
+<script type="text/template" id="city-template">
+    <div class="widget-row">
+        <span class="title"><%- name %></span>
+        <input type="checkbox" name="city" value="<%- zipcode %>">
+        <span class="glyphicon glyphicon-unchecked checkbox" aria-hidden="true"></span>
+    </div>
+</script>
+
+<script type="text/template" id="listbox-template">
+    <div class='widget'>
+        <div class='header'>Cities</div>
+        <div class="data-div">
+        </div>
+        <button id='get-weather' class='form-control'>Get Weather</button>
+    </div>
+</script>
+
+<script type="text/template" id="weatherbox-template">
+    <div class="widget">
+        <div class="header">
+            Weather
+        </div>
+        <div id="weather-div">
+        </div>
+        <div class="placeholder">
+            <p>Use the listbox on the right to select a city and view weather information!</p>
+        </div>
+        <div class="clear"></div>
+    </div>
+</script>
+
+<script type="text/template" id="weather-section-template">
+    <div class="widget-row weather">
+        <div class="row data-div">
+            <div class="header col-sm-12 col-md-9">
+                <a href="<%=url %>"><%= title %></a>
+                <div class="info">
+                    <%=datetime %>
+                </div>
+            </div>
+            <div class="subheader col-sm-12 col-md-1">
+                <a href="https://www.yahoo.com/?ilc=401" target="_blank">
+                    <img src="https://poweredby.yahoo.com/purple.png" width="134" height="29"/>
+                </a>
+            </div>
+            <div class="clearfix visible-md-block"></div>
+            <div class="clearfix visible-lg-block"></div>
+        </div>
+        <div class="row data-div">
+        </div>
+    </div>
+    <div class="clear"></div>
+</script>
+
+<script type="text/template" id="weather-data-template">
+        <div class="info">
+            <div class="title"><%- title %></div><br/>
+            <% for (var key in values) {
+                var value = values[key]; %>
+            <span class="key"><%- key %></span><span class="value"><%- value %></span><br/>
+            <% } %>
+        </div>
+    </div>
+</script>
+
+</head>
+<body>
+
+<!-- navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">WeatherApp by Carlos Brenneisen</a>
+        </div>
+    </div>
+</nav>
+
+<div id="container" class="container">
+    <div class="row">
+
+        <!-- Left Column  -->
+        <div id='listbox' class="col-xs-12 col-sm-12 col-md-4">
+
+        </div>
+
+        <!-- Right Column  -->
+        <div id='weatherbox' class="col-xs-12 col-sm-12 col-md-8">
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

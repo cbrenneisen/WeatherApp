@@ -1,0 +1,143 @@
+body{
+   padding-top: 75px;
+   background-color: #EFF4F5;
+   font-family:Arial;
+}
+
+.navbar{
+    background-color:#FFF;
+    color: #000;
+}
+
+.widget{
+    background-color: white;
+    color:black;
+    border-radius:7px;
+    border-color:black;
+    margin-bottom:15px;
+}
+
+.widget > .header{
+    width:100%;
+    padding:7px;
+    background-color: #EEFFFF;
+    border-top-left-radius:7px;
+    border-top-right-radius:7px;
+    border-bottom: 1px solid #e7e7e7;
+    font-size:18px;
+    font-weight:bold;
+    color: #777;
+}
+
+.widget-row {
+    width:100%;
+    padding: 7px;
+    font-weight: 18px;
+    float:left;
+    clear:both;
+}
+
+.widget-row .title{
+    float:left;
+}
+
+.widget-row .glyphicon{
+    float:right;
+    cursor: pointer;
+    margin:0;
+}
+
+#get-weather{
+    border-bottom-left-radius:7px;
+    border-bottom-right-radius:7px;
+    background-color:#3DC27B;
+    color:#FFF;
+    size:30px;
+    font-weight:bold;
+}
+
+#get-weather:hover{
+    background-color:#3AA4C0;
+}
+
+.clear{
+    clear:both;
+}
+
+input{
+    display:none;
+}
+
+.weather{
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.widget .placeholder{
+    height:200px;
+    text-align:center;
+    padding:40px;
+}
+
+.widget > .weather:nth-last-child(2) {
+    border-bottom-left-radius:7px;
+    border-bottom-right-radius:7px;
+}
+
+.weather .header{
+    font-size:20px;
+    font-weight:bold;
+    color: #3DC27B;
+}
+
+.widget .header a{
+    text-decoration: none;
+    color: #3DC27B;
+}
+
+.widget .header a:hover{
+    color: #3AA4C0;
+}
+
+
+.weather .subheader{
+    font-size:12px;
+    font-weight:bold;
+    color: #333;
+    margin-bottom:20px;
+}
+
+.header > .info {
+    color: #555;
+    font-size:12px;
+    margin-top: 5px;
+    width:100%;
+    border: 0;
+}
+
+.info{
+    border: 1px solid #e7e7e7;
+    border-radius:7px;
+    color: #111;
+    font-size:13px;
+    padding-left:10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+.info .title{
+    position: relative;
+    top : -0.7em;
+    /*margin-left: 1em; */
+    display: inline;
+    background-color: white;
+    font-weight: bold;
+    color: #333;
+}
+
+.key{
+    float:left;
+}
+
+.value{
+    float:right;
+}
