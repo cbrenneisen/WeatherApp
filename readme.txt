@@ -1,6 +1,6 @@
 This app uses PHP, so as long as this is run on a server running PHP everything should work smoothly! Simply load index.html in the browser to get started. 
 
-If you're on a mac, like me, then this tutorial is great one for getting apache up and going:
+If you're on a mac, like me, then this tutorial is a great one for getting apache up and going:
 http://jason.pureconcepts.net/2014/11/install-apache-php-mysql-mac-os-x-yosemite/
 
 App Description:
