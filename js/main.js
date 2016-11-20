@@ -138,9 +138,6 @@ $(document).ready(function(){
     app.cityList = new app.CityList;
     app.weatherList = new app.WeatherList;
     var dataSectionList = new app.DataSectionList;
-//    dataSectionList.add({'title': 'Wind', 'values': {'Chill': '47', 'Speed': '12mph'}});
-//    dataSectionList.add({'title': 'Atmosphere', 'values': {'Humidity': '60', 'Pressure': '10'}});
-//    app.weatherList.add([{'name':'Baltimore', 'description':'this is a test!', 'subsections': dataSectionList}]);
     app.cityList.add([{'name': 'Baltimore', 'zipcode': '21230'}, {'name': 'Washington DC', 'zipcode': '20001'},
                      {'name': 'Salt Lake City', 'zipcode': '84111'}, {'name': 'New York City', 'zipcode': '10001'},
                      {'name': 'Los Angeles', 'zipcode': '90001'}]);
@@ -187,7 +184,7 @@ $(document).ready(function(){
 
         Backbone.ajax({
             dataType: "json",
-            url: "server/weather.php",
+            url: "http://localhost/weather/server/weather.php",
             data: "zipcode="+zipcode,
             success: function(data){
                 app.WeatherBoxView.update(data);
@@ -226,7 +223,6 @@ $(document).ready(function(){
             var view = new app.WeatherSectionView({model: w});
             $('#weather-div').append(view.render().el);
           });
-
       },
       //add individual city by adding its corresponding view
       addWeatherSection: function(weatherSection, that){

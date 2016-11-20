@@ -7,6 +7,13 @@
 
 require_once("weatherObject.php");
 
+$arrContextOptions=array(
+    "ssl"=>array(
+        "verify_peer"=>false,
+        "verify_peer_name"=>false,
+    ),
+);
+
 $zipcodes = json_decode($_GET['zipcode']);
 if (gettype($zipcodes) != 'array'){
     $zipcodes = [$zipcodes];
@@ -18,9 +25,10 @@ foreach($zipcodes as $zipcode){
     //get data from Yahoo
     $url = "https://query.yahooapis.com/v1/public/yql?q=".
            "select%20*%20from%20weather.forecast%20where%20woeid%20in%20".
-           "(select%20woeid%20from%20geo.places(1)%20where%20text%3D$zipcode)".
+           "(select%20woeid%20from%20geo.places(1)%20where%20text%3D".$zipcode.")".
            "&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
-    $json = json_decode(file_get_contents($url));
+
+    $json = json_decode(file_get_contents($url, false, stream_context_create($arrContextOptions)));
 
     //massage data
     $base = $json->query->results->channel;
