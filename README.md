@@ -27,3 +27,5 @@ has some top level data and then a collection of data sections (Conditions, Wind
 Corresponding views are drawn for all of the models resulting in the final view seen.
 
 
+![Alt text](/webapp.png?raw=true "Screenshot")
+
