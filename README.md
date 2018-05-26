@@ -1,4 +1,4 @@
-# WeatherApp - Web edition
+# WeatherSkim
 
 This app uses PHP, so as long as this is run on a server running PHP everything should work smoothly!
 Either: load project in a custom folder and open up index.html in the browser
